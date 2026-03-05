@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Мой дневник — Дневник Космоса</title>
+<link rel="stylesheet" href="style.css">
+<style>
+.container {
+  max-width: 700px;
+  margin: 40px auto;
+  padding: 0 20px;
+}
+
+input, textarea {
+  width: 100%;
+  margin: 10px 0;
+  padding: 12px;
+  border-radius: 10px;
+  border: 1px solid #00e0ff;
+  background: rgba(0,0,0,0.05);
+  color: #fff;
+  font-size: 14px;
+}
+
+button {
+  padding: 10px 18px;
+  border-radius: 10px;
+  border: none;
+  background: #00e0ff;
+  color: #000;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+  margin-top: 5px;
+}
+
+button:hover {
+  background: #00c0ff;
+}
+
+.entry {
+  background: rgba(0,20,40,0.6);
+  color: #00e0ff;
+  padding: 15px;
+  margin-top: 20px;
+  border-radius: 15px;
+  box-shadow: 0 0 20px rgba(0,224,255,0.2);
+  position: relative;
+}
+
+.entry img {
+  max-width: 100%;
+  border-radius: 15px;
+  margin-top: 10px;
+}
+
+.entry-buttons {
+  display: flex;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.edit-input, .edit-textarea, .edit-date {
+  width: 100%;
+  margin: 5px 0;
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid #00e0ff;
+  background: rgba(0,0,0,0.05);
+  color: #fff;
+}
+</style>
+<link rel="icon" type="image/png" href="images/favicon.ico">
+</head>
+<body>
+
+<header>
+  <div class="nav-left">
+    <a href="index.html" class="logo">Дневник Космоса</a>
+    <nav class="main-nav">
+      <a href="index.html">Главная</a>
+      <a href="catalog.html">Каталог небесных объектов</a>
+      <a href="facts.html">Интересные факты о космосе</a>
+      <a href="planets.html">Планеты</a>
+      <a href="solar.html">3D Планетарий</a>
+      <a href="glossary.html">Глоссарий терминов</a>
+      <a href="media.html">Медиа и развлечения</a>
+      <!-- Кнопка "Мой дневник" будет динамически добавляться JS -->
+    </nav>
+  </div>
+  <div class="nav-right" id="navArea"></div>
+</header>
+
+<div class="container">
+<h1>Мой космический журнал</h1>
+
+<input type="text" id="title" placeholder="Название события">
+<input type="datetime-local" id="eventDate">
+<textarea id="content" placeholder="Описание события"></textarea>
+<input type="file" id="imageInput" accept="image/*">
+<button onclick="addEntry()">Сохранить</button>
+
+<div id="entries"></div>
+</div>
+
+<div class="toast" id="toast"></div>
+
+<script src="script.js"></script>
+<script>
+let entries = [];
+
+// ===== Загрузка из localStorage =====
+function loadEntries() {
+  const saved = localStorage.getItem('diaryEntries');
+  if (saved) {
+    entries = JSON.parse(saved);
+    renderEntries();
+  }
+}
+
+// ===== Сохранение =====
+function saveEntries() {
+  localStorage.setItem('diaryEntries', JSON.stringify(entries));
+}
+
+// ===== Отрисовка =====
+function renderEntries() {
+  const container = document.getElementById('entries');
+  container.innerHTML = '';
+
+  entries.forEach((entry, index) => {
+    const div = document.createElement('div');
+    div.className = 'entry';
+
+    div.innerHTML = `
+      <h3>${entry.title}</h3>
+      <small>${new Date(entry.date).toLocaleString()}</small>
+      <p>${entry.content}</p>
+      ${entry.image ? `<img src="${entry.image}">` : ''}
+      <div class="entry-buttons">
+        <button onclick="editEntry(${index})">Редактировать</button>
+        <button onclick="deleteEntry(${index})">Удалить</button>
+      </div>
+    `;
+
+    container.prepend(div);
+  });
+}
+
+// ===== Добавление =====
+function addEntry() {
+  const title = document.getElementById('title').value.trim();
+  const date = document.getElementById('eventDate').value;
+  const content = document.getElementById('content').value.trim();
+  const imageInput = document.getElementById('imageInput');
+
+  if (!title || !date || !content) {
+    alert("Заполните все поля!");
+    return;
+  }
+
+  const newEntry = { title, date, content, image: null };
+
+  if (imageInput.files && imageInput.files[0]) {
+    const reader = new FileReader();
+    reader.onload = function(e) {
+      newEntry.image = e.target.result;
+      entries.push(newEntry);
+      saveEntries();
+      renderEntries();
+    };
+    reader.readAsDataURL(imageInput.files[0]);
+  } else {
+    entries.push(newEntry);
+    saveEntries();
+    renderEntries();
+  }
+
+  document.getElementById('title').value = '';
+  document.getElementById('eventDate').value = '';
+  document.getElementById('content').value = '';
+  imageInput.value = '';
+}
+
+// ===== Удаление =====
+function deleteEntry(index) {
+  if (confirm("Удалить запись?")) {
+    entries.splice(index, 1);
+    saveEntries();
+    renderEntries();
+  }
+}
+
+// ===== Редактирование =====
+function editEntry(index) {
+  const entry = entries[index];
+
+  document.getElementById('title').value = entry.title;
+  document.getElementById('eventDate').value = entry.date;
+  document.getElementById('content').value = entry.content;
+
+  deleteEntry(index);
+}
+
+// Загружаем при старте
+window.onload = loadEntries;
+</script>
+<footer>© 2026 Дневник Космоса</footer>
+
+</body>
+</html>

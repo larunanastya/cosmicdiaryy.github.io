@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Каталог небесных объектов — Дневник Космоса</title>
+<link rel="stylesheet" href="style.css">
+<style>
+/* Аккордеон */
+.accordion {
+  background: rgba(0,224,255,0.05);
+  color: white;
+  cursor: pointer;
+  padding: 18px 20px;
+  width: 100%;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: 18px;
+  font-weight: 500;
+  transition: 0.3s;
+  border-radius: 12px;
+  margin-top:10px;
+}
+
+.accordion:hover {
+  background: rgba(0,224,255,0.15);
+}
+
+.accordion.active {
+  background: linear-gradient(90deg,#00e0ff,#6a5cff);
+  color:#fff;
+}
+
+.panel {
+  padding: 0 20px;
+  display: none;
+  background-color: rgba(255,255,255,0.05);
+  overflow: hidden;
+  border-radius: 12px;
+  margin-bottom:10px;
+}
+
+.panel p, .panel ul {margin:10px 0;}
+.panel ul{padding-left:20px;}
+</style>
+<link rel="icon" type="image/png" href="images/favicon.ico">
+</head>
+<body>
+
+<header>
+  <div class="nav-left">
+    <a href="index.html" class="logo">Дневник Космоса</a>
+    <nav class="main-nav">
+      <a href="index.html">Главная</a>
+      <a href="catalog.html">Каталог небесных объектов</a>
+      <a href="facts.html">Интересные факты о космосе</a>
+      <a href="planets.html">Планеты</a>
+      <a href="solar.html">3D Планетарий</a>
+      <a href="glossary.html">Глоссарий терминов</a>
+      <a href="media.html">Медиа и развлечения</a>
+      <!-- Кнопка "Мой дневник" будет динамически добавляться JS -->
+    </nav>
+  </div>
+  <div class="nav-right" id="navArea"></div>
+</header>
+
+<div class="container">
+<h1>Каталог небесных объектов</h1>
+<p>Добро пожаловать в наш каталог небесных объектов — здесь вы найдете информацию о разнообразных объектах Вселенной, от звезд и планет до галактик и туманностей. Каждый подкаталог содержит описание, типы и интересные факты.</p>
+
+<button class="accordion">1. Звезды</button>
+<div class="panel">
+<p><strong>Описание:</strong> Звезды — это гигантские светящиеся шары из горячего газа (в основном водорода и гелия), которые излучают свет и тепло за счет термоядерных реакций в своем ядре.</p>
+<p><strong>Типы звезд:</strong></p>
+<ul>
+<li>Главная последовательность — звезды, находящиеся на основном этапе жизни, как наше Солнце.</li>
+<li>Красные гиганты — крупные и яркие звезды, находящиеся на поздней стадии эволюции.</li>
+<li>Белые карлики — компактные звезды, оставшиеся после того, как большая звезда сбросила внешние слои.</li>
+<li>Нейтронные звезды — чрезвычайно плотные остатки массивных звезд после сверхновой.</li>
+</ul>
+</div>
+
+<button class="accordion">2. Планеты</button>
+<div class="panel">
+<p><strong>Описание:</strong> Планеты — это небесные тела, вращающиеся вокруг звезд и не излучающие собственного света, а отражающие свет своей звезды.</p>
+<p><strong>Типы планет:</strong></p>
+<ul>
+<li>Газовые гиганты — крупные планеты, состоящие в основном из газа, например Юпитер или Сатурн.</li>
+<li>Скальные планеты — планеты с твердой поверхностью, такие как Земля или Марс.</li>
+<li>Карликовые планеты — небольшие планеты, например Плутон, которые не доминируют на своей орбите.</li>
+</ul>
+</div>
+
+<button class="accordion">3. Спутники</button>
+<div class="panel">
+<p><strong>Описание:</strong> Спутники — это объекты, вращающиеся вокруг планет или других крупных тел.</p>
+<p><strong>Типы спутников:</strong></p>
+<ul>
+<li>Естественные спутники — такие как Луна у Земли.</li>
+<li>Искусственные спутники — созданные человеком для научных, коммуникационных или военных целей.</li>
+</ul>
+</div>
+
+<button class="accordion">4. Кометы и астероиды</button>
+<div class="panel">
+<p><strong>Описание:</strong> Малые тела Солнечной системы, которые могут содержать лед, камни и металл.</p>
+<p><strong>Типы объектов:</strong></p>
+<ul>
+<li>Кометы — небесные тела с яркой атмосферой и хвостом, образованным из-за нагрева Солнцем.</li>
+<li>Астероиды — твердые каменистые или металлические тела, преимущественно в поясе между Марсом и Юпитером.</li>
+<li>Метеороиды — мелкие объекты, которые при входе в атмосферу Земли становятся метеорами.</li>
+</ul>
+</div>
+
+<button class="accordion">5. Галактики</button>
+<div class="panel">
+<p><strong>Описание:</strong> Галактики — это огромные системы, содержащие миллиарды звезд, планет, газа и пыли.</p>
+<p><strong>Типы галактик:</strong></p>
+<ul>
+<li>Спиральные галактики — имеют диск с витками, как Млечный Путь.</li>
+<li>Эллиптические галактики — округлые или эллипсоидные, часто с меньшей активностью звездообразования.</li>
+<li>Неправильные галактики — галактики без четкой формы, иногда из-за взаимодействия с другими галактиками.</li>
+</ul>
+</div>
+
+<button class="accordion">6. Туманности</button>
+<div class="panel">
+<p><strong>Описание:</strong> Туманности — огромные облака газа и пыли в космосе, часто являющиеся «звездными питомниками».</p>
+<p><strong>Типы туманностей:</strong></p>
+<ul>
+<li>Эмиссионные — излучают свет, возбуждаясь излучением соседних звезд.</li>
+<li>Отражательные — отражают свет других звезд.</li>
+<li>Темные туманности — блокируют свет от объектов позади себя, создавая силуэты на фоне.</li>
+</ul>
+</div>
+
+<button class="accordion">7. Черные дыры</button>
+<div class="panel">
+<p><strong>Описание:</strong> Черные дыры — это области пространства, где гравитация настолько сильна, что ничто, даже свет, не может их покинуть.</p>
+<p><strong>Типы черных дыр:</strong></p>
+<ul>
+<li>Звездные черные дыры — образуются после коллапса массивной звезды.</li>
+<li>Сверхмассивные черные дыры — находятся в центрах галактик и содержат миллионы или миллиарды масс Солнца.</li>
+<li>Промежуточные черные дыры — по размеру между звездными и сверхмассивными.</li>
+</ul>
+</div>
+
+</div>
+
+<footer>© 2026 Дневник Космоса</footer>
+<div class="toast" id="toast"></div>
+<script src="script.js"></script>
+<script>
+// Скрипт для аккордеона
+const acc = document.getElementsByClassName("accordion");
+for(let i=0;i<acc.length;i++){
+  acc[i].addEventListener("click",function(){
+    this.classList.toggle("active");
+    const panel = this.nextElementSibling;
+    if(panel.style.display==="block"){panel.style.display="none";}
+    else{panel.style.display="block";}
+  });
+}
+</script>
+</body>
+</html>

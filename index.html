@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Дневник Космоса — Главная</title>
+<link rel="stylesheet" href="style.css">
+<style>
+/* Дополнительные стили для картинок на главной */
+.featured-img {
+  width: 100%;
+  max-height: 400px;
+  object-fit: cover;
+  border-radius: 15px;
+  margin: 15px 0;
+  box-shadow: 0 0 30px rgba(0,200,255,0.3);
+  transition: transform 0.4s ease;
+}
+.featured-img:hover {
+  transform: scale(1.02);
+}
+.section {
+  margin-bottom: 50px;
+}
+.section h2 {
+  font-size: 26px;
+  margin-bottom: 15px;
+  color: #00e0ff;
+  text-shadow: 0 0 15px rgba(0,224,255,0.5);
+}
+.section p {
+  line-height: 1.8;
+}
+</style>
+<link rel="icon" type="image/png" href="images/favicon.ico">
+</head>
+<body>
+
+<header>
+  <div class="nav-left">
+    <a href="index.html" class="logo">Дневник Космоса</a>
+    <nav class="main-nav">
+      <a href="index.html">Главная</a>
+      <a href="catalog.html">Каталог небесных объектов</a>
+      <a href="facts.html">Интересные факты о космосе</a>
+      <a href="planets.html">Планеты</a>
+      <a href="solar.html">3D Планетарий</a>
+      <a href="glossary.html">Глоссарий терминов</a>
+      <a href="media.html">Медиа и развлечения</a>
+      <!-- Кнопка "Мой дневник" будет динамически добавляться JS -->
+    </nav>
+  </div>
+  <div class="nav-right" id="navArea"></div>
+</header>
+
+<div class="container">
+
+  <div class="section">
+    <h2>Астрономическое событие дня</h2>
+    <img src="images\pic1.png" alt="Астрономическое событие" class="featured-img">
+    <p>Сегодня небо радует нас уникальным явлением! В вечерние часы будет виден метеорный поток Квадрантиды, пик активности которого приходится на ночь. Лучшие условия для наблюдения — после 22:00, когда Луна уже зайдет, и яркие метеоры будут особенно заметны.</p>
+    <p>Кроме того, Луна находится в фазе первой четверти, что делает идеально видимыми кратеры и возвышенности на её поверхности через телескоп или бинокль. Вечером также ярко светит Юпитер, легко различимый невооруженным глазом, и уже заметны его четыре крупнейших спутника.</p>
+    <p>Следите за небом сегодня — это шанс увидеть космические чудеса своими глазами!</p>
+  </div>
+
+  <div class="section">
+    <h2>Интересный объект недели</h2>
+    <img src="images\pic2.png" alt="Туманность Ориона" class="featured-img">
+    <p>На этой неделе мы предлагаем обратить внимание на Туманность Ориона (M42). Это огромное облако газа и пыли, находящееся примерно в 1 344 световых лет от Земли, одно из самых ярких и красивых в нашем небе.</p>
+    <p>Туманность Ориона — настоящий «звездный питомник»: здесь формируются новые звезды, а газовые облака создают причудливые формы, которые поражают воображение. Её можно наблюдать даже в небольшие телескопы или бинокли, и она всегда выглядит по-разному в зависимости от условий наблюдения.</p>
+    <p>Следите за небом и открывайте для себя красоту Вселенной каждую неделю!</p>
+  </div>
+
+</div>
+
+<footer>© 2026 Дневник Космоса</footer>
+<div class="toast" id="toast"></div>
+<script src="script.js"></script>
+</body>
+</html>

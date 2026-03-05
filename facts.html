@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Интересные факты о космосе — Дневник Космоса</title>
+<link rel="stylesheet" href="style.css">
+<style>
+/* Стили для интересных фактов */
+.container {
+  max-width: 1000px;
+  margin: 40px auto;
+  padding: 0 20px;
+}
+
+.fact-section {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  margin-top: 30px;
+}
+
+.fact-card {
+  background: rgba(0,20,40,0.6);
+  color: #00e0ff;
+  border-radius: 20px;
+  width: 280px;
+  padding: 20px;
+  box-shadow: 0 0 30px rgba(0,200,255,0.2);
+  transition: transform 0.4s, box-shadow 0.4s;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  position: relative;
+}
+
+.fact-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 0 50px rgba(0,224,255,0.4);
+}
+
+/* Заголовок с эмодзи */
+.fact-card h3 {
+  display: flex;
+  align-items: center;
+  gap: 10px; /* отступ между эмодзи и текстом */
+  margin-bottom: 10px;
+  font-size: 18px;
+  color: #fff;
+  text-shadow: 0 0 10px rgba(0,224,255,0.5);
+}
+
+.fact-card h3 span.emoji {
+  font-size: 24px;
+}
+
+/* Текст факта */
+.fact-card p {
+  font-size: 14px;
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* Адаптив */
+@media(max-width:768px){
+  .fact-card { width: 100%; }
+}
+</style>
+<link rel="icon" type="image/png" href="images/favicon.ico">
+</head>
+<body>
+
+<header>
+  <div class="nav-left">
+    <a href="index.html" class="logo">Дневник Космоса</a>
+    <nav class="main-nav">
+      <a href="index.html">Главная</a>
+      <a href="catalog.html">Каталог небесных объектов</a>
+      <a href="facts.html">Интересные факты о космосе</a>
+      <a href="planets.html">Планеты</a>
+      <a href="solar.html">3D Планетарий</a>
+      <a href="glossary.html">Глоссарий терминов</a>
+      <a href="media.html">Медиа и развлечения</a>
+      <!-- Кнопка "Мой дневник" будет динамически добавляться JS -->
+    </nav>
+  </div>
+  <div class="nav-right" id="navArea"></div>
+</header>
+
+<div class="container">
+<h1>Интересные факты о космосе</h1>
+
+<div class="fact-section">
+
+<div class="fact-card">
+<h3><span class="emoji">🌌</span>Пустота космоса</h3>
+<p>Космос почти полностью пустой — между звездами и галактиками огромные расстояния, и там почти нет вещества, поэтому космос практически вакуум.</p>
+</div>
+
+<div class="fact-card">
+<h3><span class="emoji">⭐</span>Свет летит годы</h3>
+<p>Свет от ближайшей звезды (кроме Солнца) идёт к нам более 4 лет. Это Проксима Центавра, её свет достигает Земли спустя 4,24 года.</p>
+</div>
+
+<div class="fact-card">
+<h3><span class="emoji">🕳️</span>Невидимые черные дыры</h3>
+<p>Черные дыры могут быть невидимыми — мы узнаем о них только по воздействию на окружающие объекты и излучение падающего на них газа.</p>
+</div>
+
+<div class="fact-card">
+<h3><span class="emoji">☀️</span>Солнце и Земля</h3>
+<p>Солнце огромно по сравнению с Землей — в него помещается около 1,3 миллиона планет размером с Землю.</p>
+</div>
+
+<div class="fact-card">
+<h3><span class="emoji">💫</span>Рождение и смерть звезд</h3>
+<p>Звезды рождаются и умирают — в туманностях формируются новые звезды, а гигантские звезды в конце жизни взрываются как сверхновые.</p>
+</div>
+
+<div class="fact-card">
+<h3><span class="emoji">🔇</span>В космосе нет звука</h3>
+<p>В космосе нет звука — звук распространяется через воздух, а в вакууме его нет. Космические взрывы или столкновения «бесшумны».</p>
+</div>
+
+<div class="fact-card">
+<h3><span class="emoji">🌡️</span>Экстремальные планеты</h3>
+<p>Существуют планеты с экстремальными условиями — на некоторых горячих юпитерах температура достигает тысячи градусов, а ветер дует со скоростью более 5000 км/ч.</p>
+</div>
+
+<div class="fact-card">
+<h3><span class="emoji">🌌</span>Столкновение галактик</h3>
+<p>Наша Млечный Путь и галактика Андромеды через 4–5 миллиардов лет сольются в одну гигантскую галактику.</p>
+</div>
+
+<div class="fact-card">
+<h3><span class="emoji">🌠</span>Расширение Вселенной</h3>
+<p>Вселенная расширяется — звезды и галактики удаляются друг от друга, и скорость расширения постоянно увеличивается.</p>
+</div>
+
+<div class="fact-card">
+<h3><span class="emoji">🌀</span>Удивительные формы</h3>
+<p>Во Вселенной есть удивительные формы — туманности, звёздные скопления и галактики создают невероятные фигуры и цвета, видимые только через телескопы.</p>
+</div>
+
+</div> <!-- fact-section -->
+</div> <!-- container -->
+
+<footer>© 2026 Дневник Космоса</footer>
+<div class="toast" id="toast"></div>
+<script src="script.js"></script>
+</body>
+</html>

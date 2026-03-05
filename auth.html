@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Вход — Дневник Космоса</title>
+<link rel="stylesheet" href="style.css">
+<link rel="icon" type="image/png" href="images/favicon.ico">
+</head>
+<body>
+
+<header>
+  <div class="nav-left">
+    <a href="index.html" class="logo">Дневник Космоса</a>
+    <nav class="main-nav">
+      <a href="index.html">Главная</a>
+      <a href="catalog.html">Каталог небесных объектов</a>
+      <a href="facts.html">Интересные факты о космосе</a>
+      <a href="planets.html">Планеты</a>
+      <a href="solar.html">3D Планетарий</a>
+      <a href="glossary.html">Глоссарий терминов</a>
+      <a href="media.html">Медиа и развлечения</a>
+      <!-- Кнопка "Мой дневник" будет динамически добавляться JS -->
+    </nav>
+  </div>
+  <div class="nav-right" id="navArea"></div>
+</header>
+
+<div class="auth-wrapper">
+  <div class="ring">
+    <i style="--clr:#00e0ff;"></i>
+    <i style="--clr:#6a5cff;"></i>
+    <i style="--clr:#ff357a;"></i>
+
+    <div class="login">
+
+      <h2 id="formTitle">Вход</h2>
+
+      <!-- Форма входа -->
+      <div id="loginForm">
+
+        <div class="inputBx">
+          <input type="text" id="loginUsername" placeholder="Логин">
+        </div>
+
+        <div class="inputBx">
+          <input type="password" id="loginPassword" placeholder="Пароль">
+        </div>
+
+        <div class="inputBx">
+          <input type="button" value="Войти" onclick="login()">
+        </div>
+
+        <div class="switch-block">
+          <button type="button" class="switch-btn" onclick="showRegister()">
+            Нет аккаунта? Зарегистрироваться
+          </button>
+        </div>
+
+      </div>
+
+      <!-- Форма регистрации -->
+      <div id="registerForm" style="display:none;">
+
+        <div class="inputBx">
+          <input type="text" id="regUsername" placeholder="Логин">
+        </div>
+
+        <div class="inputBx">
+          <input type="password" id="regPassword" placeholder="Пароль">
+        </div>
+
+        <div class="inputBx">
+          <input type="button" value="Создать аккаунт" onclick="register()">
+        </div>
+
+        <div class="switch-block">
+          <button type="button" class="switch-btn" onclick="showLogin()">
+            Уже есть аккаунт? Войти
+          </button>
+        </div>
+
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<div class="toast" id="toast"></div>
+
+<script src="script.js"></script>
+
+<script>
+function showRegister(){
+  document.getElementById("loginForm").style.display = "none";
+  document.getElementById("registerForm").style.display = "block";
+  document.getElementById("formTitle").innerText = "Регистрация";
+  document.title = "Регистрация — Дневник Космоса";
+}
+
+function showLogin(){
+  document.getElementById("registerForm").style.display = "none";
+  document.getElementById("loginForm").style.display = "block";
+  document.getElementById("formTitle").innerText = "Вход";
+  document.title = "Вход — Дневник Космоса";
+}
+</script>
+
+</body>
+</html>

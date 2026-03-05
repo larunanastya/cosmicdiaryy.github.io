@@ -1,0 +1,471 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Солнечная система</title>
+<link rel="icon" type="image/png" href="favicon.ico">
+
+<link rel="stylesheet" href="solar.css">
+<link rel="stylesheet"
+ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
+
+</head>
+<body>
+
+<a href="index.html" class="back-btn">← Назад на сайт</a>
+
+<div class="au-info">
+  AU — это единица измерения расстояния в астрономии,
+  где 1 AU — это среднее расстояние от центра Солнца до центра Земли.
+</div>
+
+<h1 class='logo'>
+Планетарий
+<span>3D Солнечная система</span>
+</h1>
+
+<!-- ВСТАВЬ СЮДА ВЕСЬ ОРИГИНАЛЬНЫЙ HTML СОЛНЕЧНОЙ СИСТЕМЫ -->
+<!-- начиная с <input class='planet9' ...> -->
+<!-- и до самого конца перед </body> -->
+<input class='planet9' id='pluto' name='planet' type='radio'>
+<label class='pluto menu' for='pluto'>
+  <div class='preview'></div>
+  <div class='info'>
+    <h2>
+      <div class='pip'></div>
+      Плутон
+    </h2>
+    <h3>39.5 AU</h3>
+  </div>
+</label>
+<input class='planet8' id='neptune' name='planet' type='radio'>
+<label class='neptune menu' for='neptune'>
+  <div class='preview'></div>
+  <div class='info'>
+    <h2>
+      <div class='pip'></div>
+      Нептун
+    </h2>
+    <h3>30.06 AU</h3>
+  </div>
+</label>
+<input class='planet7' id='uranus' name='planet' type='radio'>
+<label class='uranus menu' for='uranus'>
+  <div class='preview'></div>
+  <div class='info'>
+    <h2>
+      <div class='pip'></div>
+      Уран
+    </h2>
+    <h3>19.18 AU</h3>
+  </div>
+</label>
+<input class='planet6' id='saturn' name='planet' type='radio'>
+<label class='saturn menu' for='saturn'>
+  <div class='preview'></div>
+  <div class='info'>
+    <h2>
+      <div class='pip'></div>
+      Сатурн
+    </h2>
+    <h3>9.539 AU</h3>
+  </div>
+</label>
+<input class='planet5' id='jupiter' name='planet' type='radio'>
+<label class='jupiter menu' for='jupiter'>
+  <div class='preview'></div>
+  <div class='info'>
+    <h2>
+      <div class='pip'></div>
+      Юпитер
+    </h2>
+    <h3>5.203 AU</h3>
+  </div>
+</label>
+<input checked='checked' class='planet4' id='mars' name='planet' type='radio'>
+<label class='menu mars' for='mars'>
+  <div class='preview'></div>
+  <div class='info'>
+    <h2>
+      <div class='pip'></div>
+      Марс
+    </h2>
+    <h3>1.524 AU</h3>
+  </div>
+</label>
+<input checked='checked' class='planet3' id='earth' name='planet' type='radio'>
+<label class='menu earth' for='earth'>
+  <div class='preview'></div>
+  <div class='info'>
+    <h2>
+      <div class='pip'></div>
+      Земля
+    </h2>
+    <h3>1 AU</h3>
+  </div>
+</label>
+<input checked='checked' class='planet2' id='venus' name='planet' type='radio'>
+<label class='menu venus' for='venus'>
+  <div class='preview'></div>
+  <div class='info'>
+    <h2>
+      <div class='pip'></div>
+      Венера
+    </h2>
+    <h3>0.723 AU</h3>
+  </div>
+</label>
+<input checked='checked' class='planet1' id='mercury' name='planet' type='radio'>
+<label class='menu mercury' for='mercury'>
+  <div class='preview'></div>
+  <div class='info'>
+    <h2>
+      <div class='pip'></div>
+      Меркурий
+    </h2>
+    <h3>0.39 AU</h3>
+  </div>
+</label>
+
+<div class='solar'>
+  <div class='solar_systm'>
+    <div class='planet mercury'>
+      <div class='planet_description mercury'>
+        <h2>Планета</h2>
+        <h1>Меркурий</h1>
+        <p>Ближайшая к Солнцу планета. Она вращается вокруг Солнца быстрее всех остальных планет, поэтому римляне назвали ее в честь своего быстроногого бога-посланника.</p>
+
+      </div>
+      <div class='overlay'></div>
+    </div>
+  </div>
+  <div class='solar_systm'>
+    <div class='planet venus'>
+      <div class='planet_description venus'>
+        <h2>Планета</h2>
+        <h1>Венера</h1>
+        <p>Названа в честь римской богини любви и красоты. В древности считалось, что Венера — это две разные звезды: вечерняя и утренняя.</p>
+
+      </div>
+      <div class='overlay'></div>
+    </div>
+  </div>
+  <div class='solar_systm'>
+    <div class='planet earth'>
+      <div class='moon moon'>
+        <h3>Спутник</h3>
+        <h2>Луна</h2>
+      </div>
+      <div class='trajectory m'></div>
+      <div class='planet_description earth'>
+        <h2>Планета</h2>
+        <h1>Земля</h1>
+        <p>Земля — наш дом. Это единственная известная нам планета с атмосферой, содержащей свободный кислород, океанами жидкой воды на поверхности и, конечно же, жизнью.</p>
+
+      </div>
+      <div class='overlay'></div>
+    </div>
+  </div>
+  <div class='solar_systm'>
+    <div class='planet mars'>
+      <div class='moon deimos'>
+        <h3>Спутник</h3>
+        <h2>Деймос</h2>
+      </div>
+      <div class='trajectory d'></div>
+      <div class='moon phoebos'>
+        <h3>Спутник</h3>
+        <h2>Фобос</h2>
+      </div>
+      <div class='trajectory p'></div>
+      <div class='planet_description mars'>
+        <h2>Планета</h2>
+        <h1>Марс</h1>
+        <p>Четвертая планета от Солнца и вторая по величине планета Солнечной системы. Названа в честь римского бога войны, которого часто называют «Красной планетой».</p>
+
+      </div>
+      <div class='overlay'></div>
+    </div>
+  </div>
+  <div class='solar_systm'>
+    <div class='planet jupiter'>
+      <div class='moon lo'>
+        <h3>Спутник</h3>
+        <h2>Ио</h2>
+      </div>
+      <div class='moon europa'>
+        <h3>Спутник</h3>
+        <h2>Европа</h2>
+      </div>
+      <div class='moon ganymede'>
+        <h3>Спутник</h3>
+        <h2>Ганимед</h2>
+      </div>
+      <div class='trajectory lop'></div>
+      <div class='trajectory eu'></div>
+      <div class='trajectory ga'></div>
+      <div class='planet_description jupiter'>
+        <h2>Планета</h2>
+        <h1>Юпитер</h1>
+        <p>Юпитер — самая большая планета Солнечной системы. Неудивительно, что она была названа в честь царя богов из римской мифологии.</p>
+
+      </div>
+      <div class='overlay'></div>
+    </div>
+  </div>
+  <div class='solar_systm'>
+    <div class='planet saturn'>
+      <div class='moon titan'>
+        <h3>Спутник</h3>
+        <h2>Титан</h2>
+      </div>
+      <div class='moon dione'>
+        <h3>Спутник</h3>
+        <h2>Диона</h2>
+      </div>
+      <div class='moon enceladus'>
+        <h3>Спутник</h3>
+        <h2>Энцелад</h2>
+      </div>
+      <div class='trajectory ti'></div>
+      <div class='trajectory di'></div>
+      <div class='trajectory enc'></div>
+      <div class='planet_description saturn'>
+        <h2>Планета</h2>
+        <h1>Сатурн</h1>
+        <p>Сатурн — шестая планета от Солнца и вторая по величине планета Солнечной системы. Сатурн — римское название Кроноса, повелителя титанов.</p>
+
+      </div>
+      <div class='overlay'></div>
+    </div>
+  </div>
+  <div class='solar_systm'>
+    <div class='planet uranus'>
+      <div class='moon miranda'>
+        <h3>Спутник</h3>
+        <h2>Миранда</h2>
+      </div>
+      <div class='moon ariel'>
+        <h3>Спутник</h3>
+        <h2>Ариэль</h2>
+      </div>
+      <div class='moon umbriel'>
+        <h3>Спутник</h3>
+        <h2>Умбриэль</h2>
+      </div>
+      <div class='trajectory mir'></div>
+      <div class='trajectory ari'></div>
+      <div class='trajectory umb'></div>
+      <div class='planet_description uranus'>
+        <h2>Planet</h2>
+        <h1>Уран</h1>
+        <p>Первая планета, открытая учеными. Эта планета примечательна своим сильным наклоном, из-за которого ее ось почти перпендикулярна направлению на Солнце.</p>
+
+      </div>
+      <div class='overlay'></div>
+    </div>
+  </div>
+  <div class='solar_systm'>
+    <div class='planet neptune'>
+      <div class='moon triton'>
+        <h3>Спутник</h3>
+        <h2>Тритон</h2>
+      </div>
+      <div class='moon proteus'>
+        <h3>Спутник</h3>
+        <h2>Протей</h2>
+      </div>
+      <div class='moon nereid'>
+        <h3>Спутник</h3>
+        <h2>Нереида</h2>
+      </div>
+      <div class='trajectory tri'></div>
+      <div class='trajectory pro'></div>
+      <div class='trajectory ner'></div>
+      <div class='planet_description neptune'>
+        <h2>Планета</h2>
+        <h1>Нептун</h1>
+        <p>восьмая планета Солнечной системы, самая дальняя от Солнца. Названа в честь Нептуна — римского бога морей.</p>
+
+      </div>
+      <div class='overlay'></div>
+    </div>
+  </div>
+  <div class='solar_systm'>
+    <div class='planet pluto'>
+      <div class='planet_description pluto'>
+        <h2>Карликовая планета</h2>
+        <h1>Плутон</h1>
+        <p>Плутон, который когда-то считался девятой и самой удаленной от Солнца планетой, теперь является крупнейшим из известных карликовых планет Солнечной системы.</p>
+
+      </div>
+      <div class='overlay'></div>
+    </div>
+  </div>
+</div>
+<input class='read' id='readMercury' name='mercuryRead' type='radio'>
+<label class='closeBig' for='closeMercury'></label>
+<input class='read' id='closeMercury' name='mercuryRead' type='radio'>
+<div class='panel'>
+
+  <h1>Меркурий</h1>
+  <p>Меркурий — ближайшая к Солнцу планета. Поэтому он обращается вокруг Солнца быстрее всех остальных планет, из-за чего римляне назвали его в честь своего быстроногого бога-посланника.</p>
+  <p>Шумеры знали о Меркурии как минимум 5 000 лет назад. Его часто связывали с Набу — богом письма. Планета также имела разные названия как утренняя и вечерняя звезда. Однако греческие астрономы понимали, что это одно и то же небесное тело, и Гераклит около 500 года до н. э. правильно предположил, что Меркурий и Венера вращаются вокруг Солнца, а не вокруг Земли.</p>
+  <img src='https://i2.wp.com/www.astronomytrek.com/wp-content/uploads/2012/11/mercury-1.jpg?fit=678%2C381&amp;ssl=1'>
+  <h2>Год на Меркурии длится всего 88 дней.</h2>
+  <p>Один солнечный день на Меркурии (от полудня до полудня) длится 176 земных суток, а звёздные сутки — 59 земных суток. Меркурий почти приливно захвачен Солнцем, поэтому его вращение замедлилось и почти совпадает с периодом обращения вокруг Солнца. Орбита Меркурия самая вытянутая среди планет: расстояние до Солнца меняется от 46 до 70 миллионов километров.</p>
+  <h2>Меркурий — самая маленькая планета Солнечной системы.</h2>
+  <p>Это одна из пяти планет, видимых невооружённым глазом. Диаметр Меркурия составляет 4 879 км, для сравнения — диаметр Земли равен 12 742 км.</p>
+  <h2>Меркурий — вторая по плотности планета.</h2>
+  <p>Несмотря на небольшой размер, Меркурий очень плотный. Плотность составляет 5,4 г/см³ — выше только у Земли. Это связано с тем, что планета в основном состоит из тяжёлых металлов и горных пород.</p>
+  <h2>На Меркурии есть «морщины».</h2>
+  <p>Когда железное ядро планеты остывало и сжималось, поверхность сморщилась. Учёные называют эти образования лопастными уступами (Lobate Scarps). Они могут достигать высоты до 1,5 километра и простираться на сотни километров.</p>
+  <br>
+</div>
+
+<input class='read' id='readVenus' name='venusRead' type='radio'>
+<label class='closeBig' for='closeVenus'></label>
+<input class='read' id='closeVenus' name='venusRead' type='radio'>
+
+<div class='panel'>
+  <h1>Венера</h1>
+  <p>Венера — вторая планета от Солнца. Она названа в честь римской богини любви и красоты. Это единственная планета, получившая имя женского божества. Вероятно, её назвали так потому, что она ярче всех других планет, известных древним астрономам.</p>
+  <p>В древности Венеру часто принимали за две разные звезды — утреннюю и вечернюю. В латинском языке их называли соответственно Веспер и Люцифер («несущий свет»). Позже стало понятно, что это одно и то же небесное тело. Однако исследования космической эры показали, что условия на Венере крайне суровые: высокая температура и давление делают её очень сложной для изучения — космические аппараты не выживают там долго.</p>
+  <img src='https://3c1703fe8d.site.internapcdn.net/newman/gfx/news/hires/2014/2-whatistheave.jpg'>
+  <h2>Сутки на Венере длиннее её года.</h2>
+  <p>Венере требуется 243 земных дня, чтобы совершить один оборот вокруг своей оси. При этом год на Венере длится 225 земных дней. Один солнечный день на поверхности планеты равен 117 земным суткам.</p>
+  <h2>Венера вращается в противоположном направлении.</h2>
+  <p>Она вращается в обратную сторону по сравнению с большинством планет — это называется ретроградным вращением. Возможная причина — столкновение с крупным объектом в прошлом. Также у Венеры нет естественных спутников.</p>
+  <h2>Венера — второй по яркости объект на ночном небе.</h2>
+  <p>Ярче неё только Луна. Венеру можно увидеть даже днём при ясной погоде.</p>
+  <h2>Атмосферное давление на Венере в 92 раза выше земного.</h2>
+  <p>Хотя размеры Венеры похожи на земные, её плотная атмосфера разрушает мелкие астероиды ещё до падения на поверхность. Давление на поверхности сравнимо с давлением на большой глубине в океане Земли.</p>
+  <br>
+</div>
+<input class='read' id='readEarth' name='earthRead' type='radio'>
+<label class='closeBig' for='closeEarth'></label>
+<input class='read' id='closeEarth' name='earthRead' type='radio'>
+<div class='panel'>
+<div class='panel'>
+  <h1>Земля</h1>
+  <p>Земля — наш дом и третья планета от Солнца. Это единственная известная планета с атмосферой, содержащей свободный кислород, с океанами жидкой воды и, конечно, с жизнью.</p>
+  <p>Земля — пятая по величине планета Солнечной системы. Она меньше четырёх газовых гигантов — Юпитера, Сатурна, Урана и Нептуна — но больше остальных каменистых планет.</p>
+  <img src='https://images.pexels.com/photos/414171/pexels-photo-414171.jpeg?auto=compress&amp;cs=tinysrgb&amp;h=350'>
+  <h2>Вращение Земли постепенно замедляется.</h2>
+  <p>Замедление происходит почти незаметно — примерно на 17 миллисекунд за сто лет. Это постепенно удлиняет наши сутки, но процесс настолько медленный, что может пройти около 140 миллионов лет, прежде чем сутки увеличатся до 25 часов.</p>
+  <h2>Раньше Землю считали центром Вселенной.</h2>
+  <p>Из-за видимого движения Солнца и планет древние учёные считали, что Земля неподвижна, а все остальные небесные тела вращаются вокруг неё. Позже Коперник предположил, что в центре находится Солнце.</p>
+  <h2>У Земли мощное магнитное поле.</h2>
+  <p>Оно создаётся благодаря железо-никелевому ядру и быстрому вращению планеты. Магнитное поле защищает Землю от солнечного ветра.</p>
+  <h2>У Земли один естественный спутник.</h2>
+  <p>Луна — крупнейший спутник относительно размеров своей планеты в Солнечной системе, хотя по абсолютным размерам она занимает пятое место среди спутников.</p>
+  <br>
+</div>
+
+<input class='read' id='readMars' name='marsRead' type='radio'>
+<label class='closeBig' for='closeMars'></label>
+<input class='read' id='closeMars' name='marsRead' type='radio'>
+
+<div class='panel'>
+  <h1>Марс</h1>
+  <p>Марс — четвёртая планета от Солнца. Из-за своего красного цвета римляне назвали её в честь бога войны. Древние греки называли его Аресом. Египтяне называли Марс «Красный», а китайские астрономы — «Огненная звезда».</p>
+  <img src='https://1.bp.blogspot.com/-ou7Je3OVg6U/WYtxDqjNp_I/AAAAAAAACSQ/fsopS5VtFg4bmlv8hQNfiRYfJqTygCotQCLcBGAs/s2048/Martian%2Blandscape%2Bby%2BAmante%2BLombardi.jpg'>
+  <h2>Площадь суши Марса примерно равна земной.</h2>
+  <p>Хотя объём Марса составляет лишь 15% объёма Земли, около двух третей поверхности Земли покрыто водой. Гравитация на Марсе составляет всего 37% земной — человек мог бы прыгать почти в три раза выше.</p>
+  <h2>На Марсе находится самая высокая гора Солнечной системы.</h2>
+  <p>Олимп — щитовой вулкан высотой 21 км и диаметром 600 км. Несмотря на древнее происхождение, есть признаки, что он может быть всё ещё активным.</p>
+  <h2>Только 18 миссий к Марсу были полностью успешными.</h2>
+  <p>Исследование Марса продолжается, но миссии к нему часто сталкиваются с трудностями из-за сложных условий.</p>
+  <h2>На Марсе происходят крупнейшие пылевые бури.</h2>
+  <p>Они могут длиться месяцами и охватывать всю планету. Сезоны на Марсе экстремальны из-за вытянутой орбиты.</p>
+  <br>
+</div>
+
+<input class='read' id='readJupiter' name='jupiterRead' type='radio'>
+<label class='closeBig' for='closeJupiter'></label>
+<input class='read' id='closeJupiter' name='jupiterRead' type='radio'>
+
+<div class='panel'>
+  <h1>Юпитер</h1>
+  <p>Юпитер — крупнейшая планета Солнечной системы. Он назван в честь верховного бога римской мифологии. Греки связывали его с Зевсом.</p>
+  <p>В 1610 году Галилей открыл четыре крупных спутника Юпитера — Ио, Европу, Ганимед и Каллисто. Это стало доказательством того, что не всё вращается вокруг Земли.</p>
+  <img src='http://hanaleikauaivacation.com/wp-content/uploads/parser/jupiter-landscape-1.jpg'>
+  <h2>Юпитер — четвёртый по яркости объект в Солнечной системе.</h2>
+  <p>Ярче него только Солнце, Луна и Венера.</p>
+  <h2>У Юпитера самые короткие сутки.</h2>
+  <p>Он совершает оборот вокруг своей оси за 9 часов 55 минут.</p>
+  <h2>Год на Юпитере длится 11,8 земных лет.</h2>
+  <p>Из-за большого расстояния до Солнца он медленно движется по небосводу.</p>
+  <br>
+</div>
+
+<input class='read' id='readSaturn' name='saturnRead' type='radio'>
+<label class='closeBig' for='closeSaturn'></label>
+<input class='read' id='closeSaturn' name='saturnRead' type='radio'>
+
+<div class='panel'>
+  <h1>Сатурн</h1>
+  <p>Сатурн — шестая планета от Солнца и вторая по величине. Он знаменит своими впечатляющими кольцами.</p>
+  <img src='http://ak0.picdn.net/shutterstock/videos/4049260/thumb/1.jpg'>
+  <h2>Сатурн можно увидеть невооружённым глазом.</h2>
+  <p>Это пятый по яркости объект в Солнечной системе.</p>
+  <h2>Сатурн — самая «сплюснутая» планета.</h2>
+  <p>Из-за быстрого вращения его экваториальный диаметр значительно больше полярного.</p>
+  <h2>Год на Сатурне длится 29,4 земных года.</h2>
+  <p>Его медленное движение по небу было известно ещё древним наблюдателям.</p>
+  <br>
+</div>
+
+<input class='read' id='readUranus' name='uranusRead' type='radio'>
+<label class='closeBig' for='closeUranus'></label>
+<input class='read' id='closeUranus' name='uranusRead' type='radio'>
+
+<div class='panel'>
+  <h1>Уран</h1>
+  <p>Уран — седьмая планета от Солнца. Это первая планета, открытая с помощью телескопа.</p>
+  <img src='http://www.cosmosup.com/wp-content/uploads/2016/02/Uranus-Facts-About-the-Planet-Uranus-700x325.jpg'>
+  <h2>Уран вращается «на боку».</h2>
+  <p>Ось его вращения наклонена почти на 90 градусов, из-за чего сезоны там крайне необычны.</p>
+  <h2>Сутки на Уране длятся 17 часов 14 минут.</h2>
+  <p>Он вращается в обратном направлении.</p>
+  <h2>Год на Уране длится 84 земных года.</h2>
+  <p>Некоторые области планеты могут находиться в свете или темноте по 42 года подряд.</p>
+  <br>
+</div>
+
+<input class='read' id='readNeptune' name='neptuneRead' type='radio'>
+<label class='closeBig' for='closeNeptune'></label>
+<input class='read' id='closeNeptune' name='neptuneRead' type='radio'>
+
+<div class='panel'>
+  <h1>Нептун</h1>
+  <p>Нептун — восьмая планета от Солнца. Его существование было предсказано математически до фактического наблюдения.</p>
+  <img src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQy8Dd14tbXAzh1iz-EJl9tulRwH7Bb-SxX6sXpKFDbqb-NKwpE'>
+  <h2>Нептун нельзя увидеть невооружённым глазом.</h2>
+  <p>Он был открыт в 1846 году.</p>
+  <h2>Нептун вращается очень быстро.</h2>
+  <p>Один оборот вокруг оси занимает около 18 часов.</p>
+  <h2>Нептун — самый маленький ледяной гигант.</h2>
+  <p>Его атмосфера состоит в основном из водорода, гелия и метана, который придаёт планете голубой цвет.</p>
+  <br>
+</div>
+
+<input class='read' id='readPluto' name='plutoRead' type='radio'>
+<label class='closeBig' for='closePluto'></label>
+<input class='read' id='closePluto' name='plutoRead' type='radio'>
+
+<div class='panel'>
+  <h1>Плутон</h1>
+  <p>Плутон раньше считался девятой планетой, но сейчас классифицируется как карликовая планета и крупнейший объект пояса Койпера.</p>
+  <img src='https://s3-us-west-2.amazonaws.com/s.cdpn.io/217233/asd.jpeg'>
+  <h2>Плутон был переклассифицирован в 2006 году.</h2>
+  <p>Международный астрономический союз дал новое определение планеты, под которое Плутон не подошёл.</p>
+  <h2>Плутон был открыт 18 февраля 1930 года.</h2>
+  <p>За 76 лет до переклассификации он не успел совершить и трети оборота вокруг Солнца.</p>
+  <h2>У Плутона пять известных спутников.</h2>
+  <p>Харон, Гидра, Никта, Кербер и Стикс.</p>
+</div>
+
+</body>
+</html>

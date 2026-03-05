@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Дневник Космоса — Медиа и развлечения</title>
+<link rel="stylesheet" href="style.css">
+<link rel="icon" type="image/png" href="images/favicon.ico">
+
+<style>
+.section h2 {
+  color: #ffffff;
+  margin-top: -10px;
+  margin-bottom: 25px;
+  text-shadow: 0 0 10px rgba(255,255,255,0.3);
+}
+
+.media-btn {
+  width: 100%;
+  padding: 15px;
+  margin-bottom: 15px;
+  font-size: 18px;
+  text-align: left;
+  background: rgba(0, 30, 50, 0.9);
+  border: none;
+  border-radius: 12px;
+  color: #00e0ff;
+  cursor: pointer;
+  box-shadow: 0 0 15px rgba(0,200,255,0.3);
+  transition: 0.3s;
+}
+
+.media-btn:hover {
+  background: rgba(0, 60, 90, 0.9);
+}
+
+.media-content {
+  display: none;
+  margin-bottom: 25px;
+}
+
+.media-item {
+  display: flex;
+  align-items: flex-start;
+  background: rgba(0, 20, 35, 0.8);
+  padding: 12px;
+  border-radius: 10px;
+  margin-bottom: 10px;
+}
+
+.media-item img {
+  width: 80px;
+  height: 110px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-right: 15px;
+}
+
+.media-text {
+  display: flex;
+  flex-direction: column;
+}
+
+.media-title {
+  font-weight: bold;
+  color: #ffffff;
+  margin-bottom: 5px;
+}
+
+.media-desc {
+  font-size: 14px;
+  color: #cfd8dc;
+  line-height: 1.5;
+}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="nav-left">
+    <a href="index.html" class="logo">Дневник Космоса</a>
+    <nav class="main-nav">
+      <a href="index.html">Главная</a>
+      <a href="catalog.html">Каталог небесных объектов</a>
+      <a href="facts.html">Интересные факты</a>
+      <a href="planets.html">Планеты</a>
+      <a href="solar.html">3D Планетарий</a>
+      <a href="glossary.html">Глоссарий терминов</a>
+      <a href="media.html">Медиа и развлечения</a>
+    </nav>
+  </div>
+  <div class="nav-right" id="navArea"></div>
+</header>
+
+<div class="container">
+<div class="section">
+
+<h2>Космос в медиа</h2>
+
+<!-- ФИЛЬМЫ -->
+<button class="media-btn">🎬 Фильмы о космосе</button>
+<div class="media-content">
+
+  <div class="media-item">
+    <img src="media/pic1.png">
+    <div class="media-text">
+      <div class="media-title">Интерстеллар (2014)</div>
+      <div class="media-desc">
+        Команда астронавтов отправляется через червоточину в поисках нового дома для человечества, пока Земля постепенно становится непригодной для жизни.
+      </div>
+    </div>
+  </div>
+
+  <div class="media-item">
+    <img src="media/pic2.png">
+    <div class="media-text">
+      <div class="media-title">Марсианин (2015)</div>
+      <div class="media-desc">
+        Астронавт Марк Уотни остаётся один на Марсе и использует науку и изобретательность, чтобы выжить и дождаться спасения.
+      </div>
+    </div>
+  </div>
+
+  <div class="media-item">
+    <img src="media/pic3.png">
+    <div class="media-text">
+      <div class="media-title">Гравитация (2013)</div>
+      <div class="media-desc">
+        После разрушения космического шаттла астронавт пытается выжить в открытом космосе и найти путь обратно на Землю.
+      </div>
+    </div>
+  </div>
+
+  <div class="media-item">
+    <img src="media/pic4.png">
+    <div class="media-text">
+      <div class="media-title">Аполлон 13 (1995)</div>
+      <div class="media-desc">
+        Реальная история миссии NASA, которая превратилась в борьбу за выживание после аварии на борту корабля.
+      </div>
+    </div>
+  </div>
+
+  <div class="media-item">
+    <img src="media/pic5.png">
+    <div class="media-text">
+      <div class="media-title">К звёздам (2019)</div>
+      <div class="media-desc">
+        Астронавт отправляется в дальний космос, чтобы раскрыть тайну исчезновения своего отца и предотвратить угрозу для Земли.
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<!-- КНИГИ -->
+<button class="media-btn">📚 Книги</button>
+<div class="media-content">
+
+  <div class="media-item">
+    <img src="media/1.png">
+    <div class="media-text">
+      <div class="media-title">Карл Саган — Космос</div>
+      <div class="media-desc">
+        Увлекательное путешествие по истории науки, устройству Вселенной и месту человека в космосе.
+      </div>
+    </div>
+  </div>
+
+  <div class="media-item">
+    <img src="media/2.png">
+    <div class="media-text">
+      <div class="media-title">Стивен Хокинг — Краткая история времени</div>
+      <div class="media-desc">
+        Объяснение сложных космологических теорий простым языком: от чёрных дыр до происхождения Вселенной.
+      </div>
+    </div>
+  </div>
+
+  <div class="media-item">
+    <img src="media/3.png">
+    <div class="media-text">
+      <div class="media-title">Энди Вейер — Марсианин</div>
+      <div class="media-desc">
+        Научно-фантастический роман о выживании человека на Марсе.
+      </div>
+    </div>
+  </div>
+
+  <div class="media-item">
+    <img src="media/4.png">
+    <div class="media-text">
+      <div class="media-title">Артур Кларк — 2001: Космическая одиссея</div>
+      <div class="media-desc">
+        Классический роман о контакте с внеземным разумом и эволюции человечества.
+      </div>
+    </div>
+  </div>
+
+  <div class="media-item">
+    <img src="media/5.png">
+    <div class="media-text">
+      <div class="media-title">Нил Деграсс Тайсон — Астрофизика с космической скоростью</div>
+      <div class="media-desc">
+        Краткое и доступное введение в основы современной астрофизики.
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<!-- ИГРЫ -->
+<button class="media-btn">🎮 Игры</button>
+<div class="media-content">
+
+  <div class="media-item">
+    <img src="media/p1.png">
+    <div class="media-text">
+      <div class="media-title">No Man’s Sky</div>
+      <div class="media-desc">
+        Исследование огромной процедурно генерируемой вселенной с миллиардами планет, строительством баз и космическими полётами.
+      </div>
+    </div>
+  </div>
+
+  <div class="media-item">
+    <img src="media/p2.png">
+    <div class="media-text">
+      <div class="media-title">Kerbal Space Program</div>
+      <div class="media-desc">
+        Реалистичный симулятор космической программы, где нужно проектировать ракеты и выводить их на орбиту.
+      </div>
+    </div>
+  </div>
+
+  <div class="media-item">
+    <img src="media/p3.png">
+    <div class="media-text">
+      <div class="media-title">Elite Dangerous</div>
+      <div class="media-desc">
+        Космический симулятор с открытой галактикой Млечный Путь и свободой исследования.
+      </div>
+    </div>
+  </div>
+
+  <div class="media-item">
+    <img src="media/p4.png">
+    <div class="media-text">
+      <div class="media-title">Starfield</div>
+      <div class="media-desc">
+        Ролевая игра с исследованием звёздных систем, квестами и космическими приключениями.
+      </div>
+    </div>
+  </div>
+
+  <div class="media-item">
+    <img src="media/p5.png">
+    <div class="media-text">
+      <div class="media-title">Mass Effect</div>
+      <div class="media-desc">
+        Эпическая космическая сага о борьбе человечества и инопланетных рас за судьбу галактики.
+      </div>
+    </div>
+  </div>
+
+</div>
+
+</div>
+</div>
+
+<footer>© 2026 Дневник Космоса</footer>
+
+<script>
+document.querySelectorAll(".media-btn").forEach(button => {
+  button.addEventListener("click", () => {
+    const content = button.nextElementSibling;
+    content.style.display =
+      content.style.display === "block" ? "none" : "block";
+  });
+});
+</script>
+
+<script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Планеты Солнечной системы — Дневник Космоса</title>
+<link rel="stylesheet" href="style.css">
+<style>
+/* Стили для планет-аккордеон */
+.planet-section {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 25px;
+  justify-content: center;
+  margin-top: 30px;
+}
+
+.planet-card {
+  background: rgba(255,255,255,0.05);
+  border-radius: 20px;
+  width: 250px;
+  text-align: center;
+  padding: 20px;
+  box-shadow: 0 0 30px rgba(0,200,255,0.2);
+  cursor: pointer;
+  transition: transform 0.5s, box-shadow 0.5s;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.planet-card img {
+  width: 200px;
+  height: 200px;
+  object-fit: cover; /* сохраняем 1:1 */
+  border-radius: 15px;
+  margin-bottom: 10px;
+  transition: transform 0.4s;
+}
+
+.planet-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 50px rgba(0,224,255,0.4);
+}
+
+.planet-card h3 {
+  margin-bottom: 10px;
+  color: #00e0ff;
+  text-shadow: 0 0 10px rgba(0,224,255,0.5);
+}
+
+/* Панель с информацией о планете (скрыта по умолчанию) */
+.planet-info {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.5s ease, opacity 0.5s ease;
+  opacity: 0;
+  text-align: left;
+  font-size: 14px;
+  line-height: 1.6;
+  margin-top: 10px;
+  padding-left: 5px;
+}
+
+.planet-card.active .planet-info {
+  max-height: 500px;
+  opacity: 1;
+}
+
+/* Адаптив для мобильных */
+@media(max-width:768px){
+  .planet-card { width: 100%; }
+  .planet-card img {
+    width: 100%;
+    height: auto;
+    max-width: 260px;
+  }
+}
+</style>
+<link rel="icon" type="image/png" href="images/favicon.ico">
+</head>
+<body>
+
+<header>
+  <div class="nav-left">
+    <a href="index.html" class="logo">Дневник Космоса</a>
+    <nav class="main-nav">
+      <a href="index.html">Главная</a>
+      <a href="catalog.html">Каталог небесных объектов</a>
+      <a href="facts.html">Интересные факты о космосе</a>
+      <a href="planets.html">Планеты</a>
+      <a href="solar.html">3D Планетарий</a>
+      <a href="glossary.html">Глоссарий терминов</a>
+      <a href="media.html">Медиа и развлечения</a>
+      <!-- Кнопка "Мой дневник" будет динамически добавляться JS -->
+    </nav>
+  </div>
+  <div class="nav-right" id="navArea"></div>
+</header>
+
+<div class="container">
+<h1>Планеты Солнечной системы</h1>
+<p>Нажмите на любую планету, чтобы узнать подробную информацию о ней.</p>
+
+<div class="planet-section">
+
+<!-- Пример карточки -->
+<div class="planet-card">
+<img src="images/mercury.jpg" alt="Меркурий">
+<h3>Меркурий</h3>
+<div class="planet-info">
+<p>Меркурий — ближайшая к Солнцу планета. Небольшая и каменистая, поверхность усеяна кратерами. Нет атмосферы, температура сильно колеблется.</p>
+</div>
+</div>
+
+<div class="planet-card">
+<img src="images/venus.jpg" alt="Венера">
+<h3>Венера</h3>
+<div class="planet-info">
+<p>Венера — вторая планета от Солнца. Плотная атмосфера из углекислого газа и серные облака создают сильный парниковый эффект. Поверхность скрыта облаками.</p>
+</div>
+</div>
+
+<div class="planet-card">
+<img src="images/earth.jpg" alt="Земля">
+<h3>Земля</h3>
+<div class="planet-info">
+<p>Земля — наша родная планета. Покрыта океанами и материками, поддерживает жизнь благодаря атмосфере, содержащей кислород. Имеет естественный спутник — Луну.</p>
+</div>
+</div>
+
+<div class="planet-card">
+<img src="images/mars.jfif" alt="Марс">
+<h3>Марс</h3>
+<div class="planet-info">
+<p>Марс — Красная планета с пустынными ландшафтами и тонкой атмосферой. На Марсе находятся крупнейшие вулканы Солнечной системы и каньоны.</p>
+</div>
+</div>
+
+<div class="planet-card">
+<img src="images/jupiter.jpg" alt="Юпитер">
+<h3>Юпитер</h3>
+<div class="planet-info">
+<p>Юпитер — газовый гигант с массивной атмосферой. Знаменит Большим Красным Пятном — гигантской бурей. Имеет более 90 спутников.</p>
+</div>
+</div>
+
+<div class="planet-card">
+<img src="images/saturn.jfif" alt="Сатурн">
+<h3>Сатурн</h3>
+<div class="planet-info">
+<p>Сатурн — газовый гигант с кольцами из льда и камней. Одни из самых красивых объектов в Солнечной системе для наблюдения через телескоп.</p>
+</div>
+</div>
+
+<div class="planet-card">
+<img src="images/uranus.jfif" alt="Уран">
+<h3>Уран</h3>
+<div class="planet-info">
+<p>Уран — газовый гигант голубого цвета из-за метана. Осевое вращение почти лежит на боку. Имеет ледяные кольца и несколько спутников.</p>
+</div>
+</div>
+
+<div class="planet-card">
+<img src="images/neptune.png" alt="Нептун">
+<h3>Нептун</h3>
+<div class="planet-info">
+<p>Нептун — синяя планета с сильными ветрами и бурями. Обладает ледяными спутниками и тонкой атмосферой из водорода, гелия и метана.</p>
+</div>
+</div>
+
+</div>
+</div>
+
+<footer>© 2026 Дневник Космоса</footer>
+<div class="toast" id="toast"></div>
+<script src="script.js"></script>
+<script>
+// Аккордеон для планет
+const planetCards = document.querySelectorAll('.planet-card');
+planetCards.forEach(card => {
+  card.addEventListener('click', () => {
+    card.classList.toggle('active');
+  });
+});
+</script>
+</body>
+</html>
